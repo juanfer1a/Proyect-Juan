@@ -29,6 +29,16 @@ namespace ProjectFonal.Json
         public List<clsIngredientes> Ingredientes { get => ingredientes; set => ingredientes = value; }
 
 
+        public static List<string> findCategories()
+        {
+            List<string> lista = new List<string>();
+            for (int i = 0; i < deserializeJsonFile().Count; i++)
+            {
+                lista.Add(deserializeJsonFile()[i].Nombre);
+            }
+            return lista;
+        }
+
         public static List<Categoria> Categoria(string nombreCategoria)
         {
             bool bandera = false;
