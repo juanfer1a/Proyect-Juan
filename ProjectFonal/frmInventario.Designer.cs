@@ -34,13 +34,13 @@ namespace ProjectFonal
             this.txtNombreInsumo = new System.Windows.Forms.TextBox();
             this.lblNombreInsumo = new System.Windows.Forms.Label();
             this.lblMarcaInsumo = new System.Windows.Forms.Label();
-            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.lblPrecioInsumo = new System.Windows.Forms.Label();
-            this.txtProducto = new System.Windows.Forms.TextBox();
             this.lblCantidadInsumo = new System.Windows.Forms.Label();
             this.txtCantidadInsumo = new System.Windows.Forms.TextBox();
             this.lblCrearInsumo = new System.Windows.Forms.Label();
             this.btnCrearInsumo = new System.Windows.Forms.Button();
+            this.cxbCategoria = new MaterialSkin.Controls.MaterialComboBox();
+            this.materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +64,7 @@ namespace ProjectFonal
             // txtNombreInsumo
             // 
             this.txtNombreInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreInsumo.Location = new System.Drawing.Point(134, 104);
+            this.txtNombreInsumo.Location = new System.Drawing.Point(133, 224);
             this.txtNombreInsumo.Name = "txtNombreInsumo";
             this.txtNombreInsumo.Size = new System.Drawing.Size(165, 21);
             this.txtNombreInsumo.TabIndex = 4;
@@ -73,7 +73,7 @@ namespace ProjectFonal
             // 
             this.lblNombreInsumo.AutoSize = true;
             this.lblNombreInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreInsumo.Location = new System.Drawing.Point(45, 107);
+            this.lblNombreInsumo.Location = new System.Drawing.Point(39, 227);
             this.lblNombreInsumo.Name = "lblNombreInsumo";
             this.lblNombreInsumo.Size = new System.Drawing.Size(58, 15);
             this.lblNombreInsumo.TabIndex = 6;
@@ -83,43 +83,27 @@ namespace ProjectFonal
             // 
             this.lblMarcaInsumo.AutoSize = true;
             this.lblMarcaInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarcaInsumo.Location = new System.Drawing.Point(44, 151);
+            this.lblMarcaInsumo.Location = new System.Drawing.Point(39, 110);
             this.lblMarcaInsumo.Name = "lblMarcaInsumo";
             this.lblMarcaInsumo.Size = new System.Drawing.Size(69, 15);
             this.lblMarcaInsumo.TabIndex = 9;
             this.lblMarcaInsumo.Text = "Categoria";
             // 
-            // txtCategoria
-            // 
-            this.txtCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoria.Location = new System.Drawing.Point(133, 148);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(165, 21);
-            this.txtCategoria.TabIndex = 8;
-            // 
             // lblPrecioInsumo
             // 
             this.lblPrecioInsumo.AutoSize = true;
             this.lblPrecioInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioInsumo.Location = new System.Drawing.Point(44, 188);
+            this.lblPrecioInsumo.Location = new System.Drawing.Point(39, 162);
             this.lblPrecioInsumo.Name = "lblPrecioInsumo";
             this.lblPrecioInsumo.Size = new System.Drawing.Size(64, 15);
             this.lblPrecioInsumo.TabIndex = 11;
             this.lblPrecioInsumo.Text = "Producto";
             // 
-            // txtProducto
-            // 
-            this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProducto.Location = new System.Drawing.Point(133, 182);
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(165, 21);
-            this.txtProducto.TabIndex = 10;
-            // 
             // lblCantidadInsumo
             // 
             this.lblCantidadInsumo.AutoSize = true;
             this.lblCantidadInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadInsumo.Location = new System.Drawing.Point(44, 230);
+            this.lblCantidadInsumo.Location = new System.Drawing.Point(39, 264);
             this.lblCantidadInsumo.Name = "lblCantidadInsumo";
             this.lblCantidadInsumo.Size = new System.Drawing.Size(64, 15);
             this.lblCantidadInsumo.TabIndex = 13;
@@ -128,7 +112,7 @@ namespace ProjectFonal
             // txtCantidadInsumo
             // 
             this.txtCantidadInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidadInsumo.Location = new System.Drawing.Point(133, 227);
+            this.txtCantidadInsumo.Location = new System.Drawing.Point(133, 264);
             this.txtCantidadInsumo.Name = "txtCantidadInsumo";
             this.txtCantidadInsumo.Size = new System.Drawing.Size(165, 21);
             this.txtCantidadInsumo.TabIndex = 12;
@@ -145,7 +129,7 @@ namespace ProjectFonal
             // 
             // btnCrearInsumo
             // 
-            this.btnCrearInsumo.Location = new System.Drawing.Point(58, 280);
+            this.btnCrearInsumo.Location = new System.Drawing.Point(47, 320);
             this.btnCrearInsumo.Name = "btnCrearInsumo";
             this.btnCrearInsumo.Size = new System.Drawing.Size(95, 29);
             this.btnCrearInsumo.TabIndex = 17;
@@ -153,19 +137,63 @@ namespace ProjectFonal
             this.btnCrearInsumo.UseVisualStyleBackColor = true;
             this.btnCrearInsumo.Click += new System.EventHandler(this.btnCrearInsumo_Click);
             // 
+            // cxbCategoria
+            // 
+            this.cxbCategoria.AutoResize = false;
+            this.cxbCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cxbCategoria.Depth = 0;
+            this.cxbCategoria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cxbCategoria.DropDownHeight = 174;
+            this.cxbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cxbCategoria.DropDownWidth = 121;
+            this.cxbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cxbCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cxbCategoria.FormattingEnabled = true;
+            this.cxbCategoria.IntegralHeight = false;
+            this.cxbCategoria.ItemHeight = 43;
+            this.cxbCategoria.Location = new System.Drawing.Point(133, 89);
+            this.cxbCategoria.MaxDropDownItems = 4;
+            this.cxbCategoria.MouseState = MaterialSkin.MouseState.OUT;
+            this.cxbCategoria.Name = "cxbCategoria";
+            this.cxbCategoria.Size = new System.Drawing.Size(166, 49);
+            this.cxbCategoria.StartIndex = 0;
+            this.cxbCategoria.TabIndex = 18;
+            // 
+            // materialComboBox1
+            // 
+            this.materialComboBox1.AutoResize = false;
+            this.materialComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialComboBox1.Depth = 0;
+            this.materialComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.materialComboBox1.DropDownHeight = 174;
+            this.materialComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.materialComboBox1.DropDownWidth = 121;
+            this.materialComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialComboBox1.FormattingEnabled = true;
+            this.materialComboBox1.IntegralHeight = false;
+            this.materialComboBox1.ItemHeight = 43;
+            this.materialComboBox1.Location = new System.Drawing.Point(133, 144);
+            this.materialComboBox1.MaxDropDownItems = 4;
+            this.materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialComboBox1.Name = "materialComboBox1";
+            this.materialComboBox1.Size = new System.Drawing.Size(166, 49);
+            this.materialComboBox1.StartIndex = 0;
+            this.materialComboBox1.TabIndex = 19;
+            // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.Controls.Add(this.materialComboBox1);
+            this.Controls.Add(this.cxbCategoria);
             this.Controls.Add(this.btnCrearInsumo);
             this.Controls.Add(this.lblCrearInsumo);
             this.Controls.Add(this.lblCantidadInsumo);
             this.Controls.Add(this.txtCantidadInsumo);
             this.Controls.Add(this.lblPrecioInsumo);
-            this.Controls.Add(this.txtProducto);
             this.Controls.Add(this.lblMarcaInsumo);
-            this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.lblNombreInsumo);
             this.Controls.Add(this.txtNombreInsumo);
             this.Controls.Add(this.panel1);
@@ -186,12 +214,12 @@ namespace ProjectFonal
         private System.Windows.Forms.TextBox txtNombreInsumo;
         private System.Windows.Forms.Label lblNombreInsumo;
         private System.Windows.Forms.Label lblMarcaInsumo;
-        private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label lblPrecioInsumo;
-        private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.Label lblCantidadInsumo;
         private System.Windows.Forms.TextBox txtCantidadInsumo;
         private System.Windows.Forms.Label lblCrearInsumo;
         private System.Windows.Forms.Button btnCrearInsumo;
+        private MaterialSkin.Controls.MaterialComboBox cxbCategoria;
+        private MaterialSkin.Controls.MaterialComboBox materialComboBox1;
     }
 }

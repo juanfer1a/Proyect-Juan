@@ -30,7 +30,7 @@
         {
             this.btnCrearProducto = new System.Windows.Forms.Button();
             this.lblCrearProducto = new System.Windows.Forms.Label();
-            this.cbxCategoria = new System.Windows.Forms.ComboBox();
+            this.cxbCategoria = new System.Windows.Forms.ComboBox();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.lblPrecioProducto = new System.Windows.Forms.Label();
             this.txtPrecioProducto = new System.Windows.Forms.TextBox();
@@ -58,14 +58,14 @@
             this.lblCrearProducto.TabIndex = 28;
             this.lblCrearProducto.Text = "Crer Producto";
             // 
-            // cbxCategoria
+            // cxbCategoria
             // 
-            this.cbxCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(102, 145);
-            this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(165, 23);
-            this.cbxCategoria.TabIndex = 27;
+            this.cxbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cxbCategoria.FormattingEnabled = true;
+            this.cxbCategoria.Location = new System.Drawing.Point(102, 145);
+            this.cxbCategoria.Name = "cxbCategoria";
+            this.cxbCategoria.Size = new System.Drawing.Size(165, 23);
+            this.cxbCategoria.TabIndex = 27;
             // 
             // lblCategoria
             // 
@@ -120,7 +120,7 @@
             this.ClientSize = new System.Drawing.Size(325, 284);
             this.Controls.Add(this.btnCrearProducto);
             this.Controls.Add(this.lblCrearProducto);
-            this.Controls.Add(this.cbxCategoria);
+            this.Controls.Add(this.cxbCategoria);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblPrecioProducto);
             this.Controls.Add(this.txtPrecioProducto);
@@ -137,7 +137,7 @@
 
         private System.Windows.Forms.Button btnCrearProducto;
         private System.Windows.Forms.Label lblCrearProducto;
-        private System.Windows.Forms.ComboBox cbxCategoria;
+        private System.Windows.Forms.ComboBox cxbCategoria;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Label lblPrecioProducto;
         private System.Windows.Forms.TextBox txtPrecioProducto;

@@ -29,16 +29,18 @@ namespace ProjectFonal
             InitializeComponent();
             try
             {
-                //Mantenemos la tabla refrescada               
-                string MostrarTabla = "SELECT strNombre , intCantidad from tblIngrediente";
-                //Llenamos el datagrid con la información
-                dataGridView1.DataSource = cn.mostrarTabla(MostrarTabla);
-                Proveedor = "SELECT * from tblProveedor";
-                //Llenamos el datagrid con la información
-                for (int i = 0; i < cn.mostrarTabla(Proveedor).Rows.Count; i++)
-                {
+                ////Mantenemos la tabla refrescada               
+                //string MostrarTabla = "SELECT strNombre , intCantidad from tblIngrediente";
+                ////Llenamos el datagrid con la información
+                //dataGridView1.DataSource = cn.mostrarTabla(MostrarTabla);
+                //Proveedor = "SELECT * from tblProveedor";
+                ////Llenamos el datagrid con la información
+                //for (int i = 0; i < cn.mostrarTabla(Proveedor).Rows.Count; i++)
+                //{
                     
-                }
+                //}
+
+
             }
             catch (Exception ex)
             {
@@ -53,9 +55,11 @@ namespace ProjectFonal
 
         private void btnCrearInsumo_Click(object sender, EventArgs e)
         {
-            var datosProducto = Json.Json.Ingrediente(txtCategoria.Text, txtProducto.Text, txtNombreInsumo.Text);
+            var datosProducto = Json.Json.Ingrediente(cxbCategoria.Text, txtProducto.Text, txtNombreInsumo.Text);
             Json.Json.SerializarJsonCategoria(datosProducto);
 
         }
+
+      
     }
 }

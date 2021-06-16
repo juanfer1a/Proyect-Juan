@@ -39,6 +39,24 @@ namespace ProjectFonal.Json
             return lista;
         }
 
+        public static List<string> findProducts(string categorie)
+        {
+            List<string> lista = new List<string>();
+            for (int i = 0; i < deserializeJsonFile().Count; i++)
+            {
+               if (deserializeJsonFile()[i].Nombre == categorie)
+                {
+                    for (int j = 0; j < deserializeJsonFile()[i].Productos.Count; j++)
+                    {
+                        lista.Add(deserializeJsonFile()[i].Productos[j].Nombre);
+                    }
+                }
+            }
+            return lista;
+        }
+
+
+
         public static List<Categoria> Categoria(string nombreCategoria)
         {
             bool bandera = false;

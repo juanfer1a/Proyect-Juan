@@ -16,7 +16,7 @@ namespace ProjectFonal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmInventario());
+            Application.Run(new frmProductoPrueba());
         }
     }
 }

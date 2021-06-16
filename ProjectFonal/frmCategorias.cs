@@ -34,16 +34,7 @@ namespace ProjectFonal
             Json.Json.SerializarJsonCategoria(nombreCategoria);
 
 
-        }       
-
-
-        public static void SerializarJsonCategoria(List<Json.Categoria> categorias)
-        {
-            string categoriaJson = JsonConvert.SerializeObject(categorias.ToArray(), Formatting.Indented);
-
-            File.WriteAllText(path, categoriaJson);
-
-        }
+        }            
 
     }
 }
