@@ -196,39 +196,33 @@ namespace ProjectFonal.Json
                             }
                             else
                             {
-                                //for (int r = 0; r < categorias[i].Productos.Count; r++)
-                                //{
-                                for (int k = 0; s < categorias[i].Productos[j].Ingredientes.Count; k++)
+                                for (int k = 0; k < categorias[i].Productos[j].Ingredientes.Count; k++)
                                 {
                                     if (categorias[i].Productos[j].Ingredientes[k].Nombre == nombreIngrediente)
                                     {
                                         bandera = true;
                                     }
-                                    else
-                                    {
-                                        categorias[i].Productos[j].Ingredientes.Add
-                                            (
-                                                new clsIngredientes
-                                                {
-                                                    Nombre = nombreIngrediente,
-                                                    Cantidad = cantidad
-                                                }
-                                            );
-
-                                        bandera = false;
-                                    }
                                 }
 
-                                if (bandera)
+                                if (bandera == false)
+                                {
+                                    categorias[i].Productos[j].Ingredientes.Add
+                                        (
+                                            new clsIngredientes
+                                            {
+                                                Nombre = nombreIngrediente,
+                                                Cantidad = cantidad
+                                            }
+                                        );
+
+                                    bandera = false;
+                                }
+
+                                else
                                 {
                                     MessageBox.Show("El producto ya cuenta con este ingrediente");
-
                                 }
-
-                                //}
-
                             }
-
                         }
                     }
 
