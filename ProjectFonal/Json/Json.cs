@@ -32,9 +32,10 @@ namespace ProjectFonal.Json
         public static List<string> findCategories()
         {
             List<string> lista = new List<string>();
-            for (int i = 0; i < deserializeJsonFile().Count; i++)
+            var categories = deserializeJsonFile();
+            for (int i = 0; i < categories.Count; i++)
             {
-                lista.Add(deserializeJsonFile()[i].Nombre);
+                lista.Add(categories[i].Nombre);
             }
             return lista;
         }
@@ -42,13 +43,14 @@ namespace ProjectFonal.Json
         public static List<string> findProducts(string categorie)
         {
             List<string> lista = new List<string>();
-            for (int i = 0; i < deserializeJsonFile().Count; i++)
+            var categories = deserializeJsonFile();
+            for (int i = 0; i < categories.Count; i++)
             {
-               if (deserializeJsonFile()[i].Nombre == categorie)
+                if (categories[i].Nombre == categorie)
                 {
-                    for (int j = 0; j < deserializeJsonFile()[i].Productos.Count; j++)
+                    for (int j = 0; j < categories[i].Productos.Count; j++)
                     {
-                        lista.Add(deserializeJsonFile()[i].Productos[j].Nombre);
+                        lista.Add(categories[i].Productos[j].Nombre);
                     }
                 }
             }
@@ -167,7 +169,7 @@ namespace ProjectFonal.Json
             return categorias;
         }
 
-        public static List<Categoria> Ingrediente(string nombreCategoria, string nombreProducto, string nombreIngrediente)
+        public static List<Categoria> Ingrediente(string nombreCategoria, string nombreProducto, string nombreIngrediente, double cantidad)
         {
             bool bandera = false;
             var categorias = deserializeJsonFile();
@@ -186,43 +188,44 @@ namespace ProjectFonal.Json
                                     {
                                         new clsIngredientes
                                         {
-                                            Nombre = nombreIngrediente
+                                            Nombre = nombreIngrediente,
+                                            Cantidad = cantidad
                                         }
                                     };
 
                             }
                             else
                             {
-                                for (int r = 0; r < categorias[i].Productos.Count; r++)
+                                //for (int r = 0; r < categorias[i].Productos.Count; r++)
+                                //{
+                                for (int k = 0; s < categorias[i].Productos[j].Ingredientes.Count; k++)
                                 {
-                                    for (int s = 0; s < categorias[i].Productos[j].Ingredientes.Count; s++)
+                                    if (categorias[i].Productos[j].Ingredientes[k].Nombre == nombreIngrediente)
                                     {
-                                        if (categorias[i].Productos[j].Ingredientes[s].Nombre == nombreIngrediente)
-                                        {
-                                            bandera = true;
-                                        }
+                                        bandera = true;
                                     }
-
-                                    if (bandera)
-                                    {
-                                        MessageBox.Show("El nombre del producto esta registrado");
-
-                                    }
-
                                     else
                                     {
                                         categorias[i].Productos[j].Ingredientes.Add
                                             (
                                                 new clsIngredientes
                                                 {
-                                                    Nombre = nombreIngrediente
-
+                                                    Nombre = nombreIngrediente,
+                                                    Cantidad = cantidad
                                                 }
                                             );
 
                                         bandera = false;
                                     }
                                 }
+
+                                if (bandera)
+                                {
+                                    MessageBox.Show("El producto ya cuenta con este ingrediente");
+
+                                }
+
+                                //}
 
                             }
 

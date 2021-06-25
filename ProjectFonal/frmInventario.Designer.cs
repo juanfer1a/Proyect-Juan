@@ -40,7 +40,7 @@ namespace ProjectFonal
             this.lblCrearInsumo = new System.Windows.Forms.Label();
             this.btnCrearInsumo = new System.Windows.Forms.Button();
             this.cxbCategoria = new MaterialSkin.Controls.MaterialComboBox();
-            this.materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
+            this.cxbProduct = new MaterialSkin.Controls.MaterialComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -158,35 +158,36 @@ namespace ProjectFonal
             this.cxbCategoria.Size = new System.Drawing.Size(166, 49);
             this.cxbCategoria.StartIndex = 0;
             this.cxbCategoria.TabIndex = 18;
+            this.cxbCategoria.SelectedValueChanged += new System.EventHandler(this.cxbCategoria_SelectedValueChanged);
             // 
-            // materialComboBox1
+            // cxbProduct
             // 
-            this.materialComboBox1.AutoResize = false;
-            this.materialComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialComboBox1.Depth = 0;
-            this.materialComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.materialComboBox1.DropDownHeight = 174;
-            this.materialComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.materialComboBox1.DropDownWidth = 121;
-            this.materialComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialComboBox1.FormattingEnabled = true;
-            this.materialComboBox1.IntegralHeight = false;
-            this.materialComboBox1.ItemHeight = 43;
-            this.materialComboBox1.Location = new System.Drawing.Point(133, 144);
-            this.materialComboBox1.MaxDropDownItems = 4;
-            this.materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialComboBox1.Name = "materialComboBox1";
-            this.materialComboBox1.Size = new System.Drawing.Size(166, 49);
-            this.materialComboBox1.StartIndex = 0;
-            this.materialComboBox1.TabIndex = 19;
+            this.cxbProduct.AutoResize = false;
+            this.cxbProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cxbProduct.Depth = 0;
+            this.cxbProduct.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cxbProduct.DropDownHeight = 174;
+            this.cxbProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cxbProduct.DropDownWidth = 121;
+            this.cxbProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cxbProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cxbProduct.FormattingEnabled = true;
+            this.cxbProduct.IntegralHeight = false;
+            this.cxbProduct.ItemHeight = 43;
+            this.cxbProduct.Location = new System.Drawing.Point(133, 144);
+            this.cxbProduct.MaxDropDownItems = 4;
+            this.cxbProduct.MouseState = MaterialSkin.MouseState.OUT;
+            this.cxbProduct.Name = "cxbProduct";
+            this.cxbProduct.Size = new System.Drawing.Size(166, 49);
+            this.cxbProduct.StartIndex = 0;
+            this.cxbProduct.TabIndex = 19;
             // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Controls.Add(this.materialComboBox1);
+            this.Controls.Add(this.cxbProduct);
             this.Controls.Add(this.cxbCategoria);
             this.Controls.Add(this.btnCrearInsumo);
             this.Controls.Add(this.lblCrearInsumo);
@@ -220,6 +221,6 @@ namespace ProjectFonal
         private System.Windows.Forms.Label lblCrearInsumo;
         private System.Windows.Forms.Button btnCrearInsumo;
         private MaterialSkin.Controls.MaterialComboBox cxbCategoria;
-        private MaterialSkin.Controls.MaterialComboBox materialComboBox1;
+        private MaterialSkin.Controls.MaterialComboBox cxbProduct;
     }
 }

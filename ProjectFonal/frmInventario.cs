@@ -40,6 +40,7 @@ namespace ProjectFonal
                     
                 //}
 
+               
 
             }
             catch (Exception ex)
@@ -55,11 +56,18 @@ namespace ProjectFonal
 
         private void btnCrearInsumo_Click(object sender, EventArgs e)
         {
-            var datosProducto = Json.Json.Ingrediente(cxbCategoria.Text, txtProducto.Text, txtNombreInsumo.Text);
+            var datosProducto = Json.Json.Ingrediente(cxbCategoria.Text, cxbProduct.Text, txtNombreInsumo.Text,int.Parse(txtCantidadInsumo.Text));
             Json.Json.SerializarJsonCategoria(datosProducto);
-
         }
 
-      
+        private void cxbCategoria_SelectedValueChanged(object sender, EventArgs e)
+        {
+            cxbProduct.Items.Clear();
+            var product = Json.Json.findProducts(cxbCategoria.Text);
+            for (int i = 0; i < product.Count; i++)
+            {
+                cxbProduct.Items.Add(product[i]); 
+            }
+        }
     }
 }
